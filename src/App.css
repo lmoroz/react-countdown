@@ -1,0 +1,64 @@
+	:root {
+		--smallerfont: 75%;
+	}
+	.App {
+		display: flex;
+		font-size: 35px;
+		flex-direction: column;
+		justify-content: center;
+		height: 90vh;
+		text-align: center;
+	}
+
+	.App>* {
+		display: flex;
+		flex-direction: column;		
+	}
+
+	@media screen and (max-height: 400px) {
+
+		.App {
+			justify-content: center;
+			flex-direction: row;
+			height: 100vh;
+			align-items: flex-end;
+			width: 90vw;
+			margin: 0 auto;
+		}
+
+		.App>* {
+			display: flex;
+			flex-direction: column;		
+			padding: 10px;
+		}
+	}
+
+	.App-title {
+		font-size: 50px;
+	}
+
+	.presets {
+		display: flex;
+		justify-content: center;
+	}
+
+	.Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds {
+		padding: 10px;
+		font-size: var(--smallerfont);
+	}
+
+	.controls {
+		border: 1px solid #cfcfcf;
+		border-radius: 5px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50vw;
+		margin: 10px auto;
+	}
+
+	.controls>* {
+		font-size: var(--smallerfont);
+		margin: 5px;
+	}
