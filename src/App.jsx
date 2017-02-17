@@ -32,7 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <div className="App-title">Countdown to <span className='deadline'>{ this.state.deadlineTitle }</span>
+          <div className="App-title">
+            Countdown to <span className='deadline'>{ this.state.deadlineTitle }</span>
           </div>
           <Clock deadline={ this.state.deadline } />
           <Form inline className="controls">
