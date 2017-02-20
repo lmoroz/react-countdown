@@ -27,8 +27,8 @@ class App extends Component {
     console.log('App.fireApp() !');
   }
 
-
   render() {
+
     return (
       <div className="App">
         <div>
@@ -46,7 +46,7 @@ class App extends Component {
         </div>
         <Stopwatch initialValue='00:07' />
       </div>
-    );
+      );
   }
 }
 

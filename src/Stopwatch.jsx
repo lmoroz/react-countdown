@@ -52,7 +52,9 @@ class Stopwatch extends Component {
       'timerInProgress': this.state ? this.state.timerInProgress : undefined,
       'timetostop': this.state ? this.state.timetostop : undefined
     });
-    if (!startTimer && (!this.state.timerInProgress || this.state.timetostop === false)) return;
+    if (!startTimer &&
+        (!this.state.timerInProgress || this.state.timetostop === false))
+      return;
 
     const newBound = (startTimer) ? this.setNewBound() : this.state.timetostop;
     const leastMSeconds = newBound - Date.parse(new Date());
@@ -113,17 +115,14 @@ class Stopwatch extends Component {
             { this.state.seconds } seconds
           </div>
         </div>
-        <Form inline className="controls">
+        <Form className="controls" inline>
           <FormControl placeholder='time to stop' type='time' id='stopwatchtime' onChange={ (event) => this.changeTime(event.target.value) } />
           <Button onClick={ () => this.ToggleTimer() }>
-            { this.state.timerInProgress ? 'Stop' : 'Start' }
-          </Button>
+            { this.state.timerInProgress ? 'Stop' : 'Start' } </Button>
         </Form>
       </div>
-
     )
   }
-
-
 }
+
 export default Stopwatch;
